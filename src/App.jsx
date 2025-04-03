@@ -20,19 +20,20 @@ export const App = () => {
       isMarried: true,
       partnerName: 'Maksym',
     },
-    {
-      id: '3',
-      name: 'Alex',
-      age: 25,
-      sex: 'm',
-      isMarried: false,
-    },
+    { id: '3', name: 'Alex', age: 25, sex: 'm', isMarried: false },
   ];
 
   return (
     <div>
-      {people.map(person => (
-        <Person key={person.id} person={person} />
+      {people.map(({ id, name, age, sex, isMarried, partnerName }) => (
+        <Person
+          key={id}
+          name={name}
+          age={age}
+          sex={sex}
+          isMarried={isMarried}
+          partnerName={partnerName}
+        />
       ))}
     </div>
   );
