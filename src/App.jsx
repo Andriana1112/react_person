@@ -28,11 +28,7 @@ export const App = () => {
       {people.map(({ id, name, age, sex, isMarried, partnerName }) => (
         <Person
           key={id}
-          name={name}
-          age={age}
-          sex={sex}
-          isMarried={isMarried}
-          partnerName={partnerName}
+          person={{ id, name, age, sex, isMarried, partnerName }}
         />
       ))}
     </div>
